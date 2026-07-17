@@ -17,9 +17,10 @@ build:
 
 requirements:
   build:
-    - meson
     - ninja
     - pkg-config
+  host:
+    - meson
 
 test:
   commands:
@@ -39,6 +40,7 @@ about:
     The specification is availible at:
     http://www.freedesktop.org/standards/icon-theme-spec/
   dev_url: https://gitlab.freedesktop.org/xdg/default-icon-theme
+  doc_url: https://specifications.freedesktop.org/icon-theme/
 
 extra:
   recipe-maintainers:
