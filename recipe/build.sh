@@ -2,5 +2,5 @@
 
 set -ex
 
-./configure --prefix=$PREFIX
-make install
+meson setup builddir --prefix=$PREFIX
+meson install -C builddir
