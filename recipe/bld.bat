@@ -1,7 +1,7 @@
 @echo on
 
-:: nothing more to do than copy "index.theme" to the right location
+meson setup builddir --prefix=%LIBRARY_PREFIX% --backend ninja
+if errorlevel 1 exit 1
 
-md "%LIBRARY_PREFIX%\share\icons\hicolor"
-copy "index.theme" "%LIBRARY_PREFIX%\share\icons\hicolor\index.theme"
+meson install -C builddir
 if errorlevel 1 exit 1
